@@ -72,12 +72,26 @@ footer{display:flex;justify-content:center;text-align:center;padding-top:20px;ma
 .creds h2{margin:0;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
 .creds ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .creds li{font-size:12.5px;font-weight:500;color:var(--marsala);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:5px 12px}
+.side,.content{display:flex;flex-direction:column;gap:24px;min-width:0}
+@media (min-width:960px){
+  body{padding:0 32px}
+  .wrap{max-width:1120px;display:grid;grid-template-columns:400px 1fr;column-gap:64px;row-gap:32px;align-items:start;padding-block:64px}
+  .side{position:sticky;top:48px}
+  .content{padding-top:8px}
+  footer{grid-column:1 / -1}
+  .card-h{padding:18px 24px}
+  .row{padding:18px 24px;grid-template-columns:48px 1fr auto}
+  .ico{width:48px;height:48px}
+  .txt strong{font-size:16.5px}
+  .txt p{font-size:14px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
 </head>
 <body>
 <main class="wrap">
+  <aside class="side">
   <header class="head">
     <img class="sym" alt="Símbolo da B&amp;M Soluções em Engenharia" src="data:image/png;base64,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">
     <h1>Jéssica Moraes</h1>
@@ -104,8 +118,11 @@ footer{display:flex;justify-content:center;text-align:center;padding-top:20px;ma
     <p class="contact">(51) 99653-8202 · engjessicamoraes@gmail.com</p>
   </section>
 
+  </aside>
+
+  <div class="content">
   <section class="card">
-    <div class="card-h"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><h2>Diagnóstico</h2><span>Toque para orçar</span></div>
+    <div class="card-h"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><h2>Diagnóstico</h2><span>Orçamento pelo WhatsApp</span></div>
       <a class="row" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20inspe%C3%A7%C3%A3o%20predial%20%28LTIP%29." target="_blank" rel="noopener">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 8l8 2v11M3 21h18"/><path d="M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/></svg></span>
         <span class="txt"><strong>Inspeção Predial e LTIP</strong><p>Vistoria da edificação, laudo técnico e plano de ação com as prioridades de manutenção.</p></span>
@@ -119,7 +136,7 @@ footer{display:flex;justify-content:center;text-align:center;padding-top:20px;ma
   </section>
 
   <section class="card">
-    <div class="card-h"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="7.5"/><rect x="3" y="13.5" width="7.5" height="7.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5"/></svg><h2>Projetos e Obras</h2><span>Toque para orçar</span></div>
+    <div class="card-h"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="7.5"/><rect x="3" y="13.5" width="7.5" height="7.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5"/></svg><h2>Projetos e Obras</h2><span>Orçamento pelo WhatsApp</span></div>
       <a class="row" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20PPCI." target="_blank" rel="noopener">
         <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21c-3.9 0-7-2.7-7-6.5 0-3.4 2.3-5.4 3.6-7.6.3 1.8 1.3 3 2.6 3.4-.4-3.2 1-6 3.3-7.3-.2 2.6 1 4.3 2.6 6.1C18.7 10.9 19 12.6 19 14.5 19 18.3 15.9 21 12 21z"/><path d="M12 21c-1.7 0-3-1.2-3-2.9 0-1.6 1.2-2.6 2-3.6.4 1 1.2 1.6 2 1.8.1-1 .5-1.8 1.2-2.4.5 1.2.8 2.2.8 3.1 0 2.2-1.3 4-3 4z"/></svg></span>
         <span class="txt"><strong>PPCI</strong><p>Plano de Prevenção e Proteção Contra Incêndio e adequações exigidas pelo Corpo de Bombeiros.</p></span>
@@ -155,6 +172,8 @@ footer{display:flex;justify-content:center;text-align:center;padding-top:20px;ma
         <span class="go" aria-hidden="true">→</span>
       </a>
   </section>
+
+  </div>
 
   <footer>
     <span>Porto Alegre e Região Metropolitana · RS</span>

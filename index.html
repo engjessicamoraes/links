@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jéssica Moraes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;500;600&display=swap">
+<style>
+/* Layout: papel timbrado clássico — símbolo da B&M e nome em serifa; o restante em Montserrat. Cada frente em um cartão próprio, com ícones de traço fino. Tema único claro, por escolha. */
+:root{
+  color-scheme:light;
+  --paper:#F7F2EB;
+  --card:#FFFFFF;
+  --ink:#2E1424;
+  --muted:#76606B;
+  --rule:#EAE1D4;
+  --marsala:#5C2543;
+  --marsala-deep:#4A1D36;
+  --tint:#F3ECE9;
+  --gold:#847445;
+  --gold-soft:#B9A672;
+  --on-marsala:#FBF8F3;
+  --serif:'Cormorant Garamond','Garamond','Times New Roman',serif;
+  --sans:'Montserrat',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;padding:0 16px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:460px;margin:0 auto;padding-block:44px 56px;display:flex;flex-direction:column;gap:24px}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+.head{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;margin-bottom:12px}
+.sym{width:64px;height:auto;margin-bottom:10px}
+h1{margin:0;font-family:var(--serif);font-weight:600;font-size:46px;line-height:1;letter-spacing:.01em;color:var(--marsala)}
+.role{margin:0;font-size:11.5px;font-weight:600;letter-spacing:.18em;line-height:1.8;text-transform:uppercase;color:var(--muted)}
+.role span{font-weight:500;letter-spacing:.14em;font-variant-numeric:tabular-nums}
+.orn{display:flex;align-items:center;gap:10px;width:100%;max-width:220px;margin:6px 0 2px}
+.orn::before,.orn::after{content:"";flex:1;height:1px;background:var(--gold-soft)}
+.orn i{width:7px;height:7px;border:1.5px solid var(--gold);display:block}
+.lede{margin:0;font-weight:500;font-size:16px;line-height:1.45;color:var(--ink);text-wrap:balance;max-width:28ch}
+.firm{margin:0;font-size:12.5px;font-weight:600;letter-spacing:.06em;color:var(--gold)}
+
+.cta{display:flex;align-items:center;justify-content:space-between;gap:14px;background:var(--marsala);color:var(--on-marsala);text-decoration:none;padding:18px 22px;border-radius:6px;transition:background .15s}
+.cta:hover{background:var(--marsala-deep)}
+.cta b{display:block;font-weight:600;font-size:15.5px}
+.cta small{display:block;font-size:12.5px;opacity:.82;margin-top:2px}
+.cta .arr{color:var(--gold-soft);font-size:22px}
+.contact{margin:10px 0 0;text-align:center;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* Cartões de seção */
+.card{background:var(--card);border:1px solid var(--rule);border-radius:8px;overflow:hidden}
+.card-h{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(--marsala);color:var(--on-marsala)}
+.card-h h2{margin:0;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase}
+.card-h svg{width:20px;height:20px;stroke:var(--gold-soft);flex:none}
+.card-h span{margin-left:auto;font-size:11.5px;opacity:.75}
+.row{display:grid;grid-template-columns:44px 1fr auto;align-items:center;gap:14px;padding:16px 18px;text-decoration:none;border-top:1px solid var(--rule)}
+.card-h + .row{border-top:0}
+.ico{width:44px;height:44px;border-radius:8px;background:var(--tint);display:grid;place-items:center}
+.ico svg{width:22px;height:22px;stroke:var(--marsala)}
+.txt{min-width:0}
+.txt strong{display:block;font-weight:600;font-size:15.5px;line-height:1.3}
+.txt p{margin:3px 0 0;color:var(--muted);font-size:13px;line-height:1.5}
+.go{color:var(--gold);font-size:18px;transition:transform .15s}
+.row:hover{background:#FCFAF7}
+.row:hover .go{transform:translateX(3px)}
+svg{fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+footer{display:flex;justify-content:center;text-align:center;padding-top:20px;margin-top:8px;border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+.creds{display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:6px}
+.creds h2{margin:0;font-size:10.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.creds ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.creds li{font-size:12.5px;font-weight:500;color:var(--marsala);background:var(--card);border:1px solid var(--rule);border-radius:999px;padding:5px 12px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+</head>
+<body>
+<main class="wrap">
+  <header class="head">
+    <img class="sym" alt="Símbolo da B&amp;M Soluções em Engenharia" src="data:image/png;base64,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">
+    <h1>Jéssica Moraes</h1>
+    <p class="role">Engenheira Civil pela UFRGS<br><span>CREA-RS 230405</span></p>
+    <div class="orn" aria-hidden="true"><i></i></div>
+    <p class="lede">Engenharia Diagnóstica para Condomínios e Edificações</p>
+    <p class="firm">B&amp;M SOLUÇÕES EM ENGENHARIA</p>
+    <div class="creds">
+      <h2>Especializações</h2>
+      <ul>
+        <li>Manifestações Patológicas das Construções</li>
+        <li>Engenharia de Avaliações e Perícias</li>
+        <li>Engenharia de Prevenção de Incêndios</li>
+        <li>Gestão de Projetos</li>
+      </ul>
+    </div>
+  </header>
+
+  <section>
+    <a class="cta" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20falar%20sobre%20um%20servi%C3%A7o." target="_blank" rel="noopener">
+      <span><b>Fale Comigo no WhatsApp</b><small>Orçamentos de laudos, projetos e obras</small></span>
+      <span class="arr" aria-hidden="true">→</span>
+    </a>
+    <p class="contact">(51) 99653-8202 · engjessicamoraes@gmail.com</p>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg><h2>Diagnóstico</h2><span>Toque para orçar</span></div>
+      <a class="row" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20inspe%C3%A7%C3%A3o%20predial%20%28LTIP%29." target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 21V5l8-2v18M12 8l8 2v11M3 21h18"/><path d="M7 8h2M7 12h2M7 16h2M15 13h2M15 17h2"/></svg></span>
+        <span class="txt"><strong>Inspeção Predial e LTIP</strong><p>Vistoria da edificação, laudo técnico e plano de ação com as prioridades de manutenção.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="row" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20laudo%20t%C3%A9cnico%20ou%20per%C3%ADcia." target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7"/><path d="M14 3l5 5h-5z"/><path d="M8 9h3M8 13h5"/><circle cx="17" cy="16" r="3"/><path d="M19.2 18.2 21 20"/></svg></span>
+        <span class="txt"><strong>Laudos Técnicos e Perícias</strong><p>Origem de fissuras, infiltrações e corrosão, nexo causal com obras vizinhas e perícias judiciais.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="7.5"/><rect x="3" y="13.5" width="7.5" height="7.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5"/></svg><h2>Projetos e Obras</h2><span>Toque para orçar</span></div>
+      <a class="row" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20PPCI." target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21c-3.9 0-7-2.7-7-6.5 0-3.4 2.3-5.4 3.6-7.6.3 1.8 1.3 3 2.6 3.4-.4-3.2 1-6 3.3-7.3-.2 2.6 1 4.3 2.6 6.1C18.7 10.9 19 12.6 19 14.5 19 18.3 15.9 21 12 21z"/><path d="M12 21c-1.7 0-3-1.2-3-2.9 0-1.6 1.2-2.6 2-3.6.4 1 1.2 1.6 2 1.8.1-1 .5-1.8 1.2-2.4.5 1.2.8 2.2.8 3.1 0 2.2-1.3 4-3 4z"/></svg></span>
+        <span class="txt"><strong>PPCI</strong><p>Plano de Prevenção e Proteção Contra Incêndio e adequações exigidas pelo Corpo de Bombeiros.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="row" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20projetos%20complementares." target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="1.5"/><path d="M3 10h8v10M11 14h10M15 4v6"/></svg></span>
+        <span class="txt"><strong>Projetos Complementares</strong><p>Projetos complementares da edificação, compatibilizados com a arquitetura.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="row" href="https://wa.me/5551996538202?text=Ol%C3%A1%2C%20J%C3%A9ssica%21%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20um%20or%C3%A7amento%20de%20acompanhamento%20de%20obra." target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z"/><path d="m8.5 11 1.5 1.5L13 9.5M8.5 16.5l1.5 1.5 3-3"/><path d="M15 11.5h1M15 17h1"/></svg></span>
+        <span class="txt"><strong>Acompanhamento de Obra</strong><p>Fiscalização técnica de obras de recuperação, fachada e impermeabilização, com relatório de cada visita.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+  </section>
+
+  <section class="card">
+    <div class="card-h"><svg viewBox="0 0 24 24"><circle cx="12" cy="9" r="6"/><path d="M8.5 13.9 7 21l5-2.5 5 2.5-1.5-7.1"/></svg><h2>Conheça Meu Trabalho</h2></div>
+      <a class="row" href="https://youtu.be/eEXrJibaYGc" target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m10 9 5 3-5 3z"/></svg></span>
+        <span class="txt"><strong>Palestra: Inspeção Predial</strong><p>Apresentação no SENGE-RS, disponível no YouTube.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="row" href="https://www.sperinde.com/lugar-para-viver-bem/4937-2/" target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h12v15a2 2 0 0 0 2 2H6a2 2 0 0 1-2-2V5a1 1 0 0 1 1-1z"/><path d="M17 8h3v11a2 2 0 0 1-2 2"/><path d="M8 8h5M8 12h6M8 16h6"/></svg></span>
+        <span class="txt"><strong>Na Imprensa</strong><p>Reportagem publicada pela Imobiliária Sperinde.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="row" href="https://www.linkedin.com/in/jessicabmoraes/" target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M3 13h18"/></svg></span>
+        <span class="txt"><strong>Trajetória Profissional</strong><p>Formação, especializações e experiência no LinkedIn.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+  </section>
+
+  <footer>
+    <span>Porto Alegre e Região Metropolitana · RS</span>
+  </footer>
+</main>
+
+</body>
+</html>
